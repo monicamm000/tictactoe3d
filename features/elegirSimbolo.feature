@@ -18,3 +18,10 @@ Escenario: un jugador elije el simbolo X
   Cuando el jugador elije el simbolo "simboloX"
   Y inicio un juego
   Entonces debo ver "Jugador 1 jugará con X"
+
+
+Escenario: un jugador elije el simbolo O
+  Dado estoy eligiendo simbolo
+  Cuando el jugador elije el simbolo "simboloO"
+  Y inicio un juego
+  Entonces debo ver "Jugador 1 jugará con O"
