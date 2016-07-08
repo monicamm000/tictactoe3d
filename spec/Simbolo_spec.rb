@@ -5,4 +5,5 @@ describe Simbolo do
     partido = Simbolo.new "X"
     partido.getSimbolo.should == "O"
   end
+
 end
