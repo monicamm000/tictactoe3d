@@ -1,0 +1,14 @@
+
+.tablero table {
+      border: 1px solid black;
+      width: 100%;
+  }
+
+.tablero tr {
+      height: 50px;
+  }
+
+.tablero td {
+      height: 50px;
+      vertical-align: center;
+  }
