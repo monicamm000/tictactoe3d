@@ -8,18 +8,19 @@ get '/' do
 end
 
 post '/juego' do
-  @simboloJ1 = params["simbolo"]
-  simbolo = Simbolo.new params["simbolo"]
-  @simboloJ2 = simbolo.getSimbolo
-  session["casillas"] = ["1","2",3,4,5,6,7,8,9]
 
-    erb :index
+  session["simboloJ1"] = params["simbolo"]
+  session["simboloObj"] = Simbolo.new params["simbolo"]
+  session["simboloJ2"] = session["simboloObj"].getSimbolo
+  session["turno"] = "Jugador 1"
+  erb :index
 end
 
 post '/marcar' do
-  @casilla = params["numCasilla"]
-  @simboloEnTurno = "X"
-  session["casillas"][@casilla.to_i - 1] = "X"
-
-  erb :index
+  if session["turno"] == "Jugador 1"
+    session["turno"] = "Jugador 2"
+  else
+    session["turno"] = "Jugador 1"
+  end
+    erb :index
 end

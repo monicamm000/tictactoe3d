@@ -15,8 +15,8 @@
       }
 
     .tablero td {
-          height: 200px;
-          width: 200px;
+          height: 140px;
+          width: 140px;
           text-align: center;
       }
     </style>
@@ -29,12 +29,17 @@
       </th>
       <tr>
         <td>
-          Jugador 1 jugará con <%= @simboloJ1  %>
+          Jugador 1 jugará con <%= session["simboloJ1"]  %>
         </td>
       </tr>
       <tr>
         <td>
-          Jugador 2 jugará con <%= @simboloJ2  %>
+          Jugador 2 jugará con <%= session["simboloJ2"]  %>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          En turno: <%= session["turno"]%>
         </td>
       </tr>
     </table>
