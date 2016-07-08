@@ -20,11 +20,11 @@ Then(/^el tablero debe tener "(.*?)" casillas$/) do |numeroCasillas|
 end
 
 Then(/^seleccionar casilla "(.*?)"$/) do |numCasilla|
-  check(numCasilla)
+  click_button("Jugar")
 end
 
 Then(/^debo ver simbolo "(.*?)" en casilla "(.*?)"$/) do |simbolo, numCasilla|
-   last_response.should have_xpath("//h3[text()='#{simbolo}' and @name='casilla#{numCasilla}']")
+   last_response.should have_xpath("//h1[text()='#{simbolo}' and @name='casilla#{numCasilla}']")
 end
 
 Entonces(/^debo ver "(.*?)"$/) do |simbolo|

@@ -16,7 +16,8 @@
 
     .tablero td {
           height: 200px;
-          vertical-align: center;
+          width: 200px;
+          text-align: center;
       }
     </style>
   </head>
@@ -32,41 +33,46 @@
         </td>
       </tr>
     </table>
+    <br>
+    <form action="/juego" method="post">
+        <input type="text" name="numCasilla" value="">
+      <input type="submit" name="Jugar" value="Jugar" >
+    </form>
+
     <table id="tablero9casillas" align=center border="1" style="" class="tablero">
         <tr id=renglon1>
           <td id=casilla1>
-            <h3 name="casilla1">O</h3>
-            <input type="checkbox" name="1" value="">
+            <h1 name="casilla1">O</h1>
           </td>
           <td id=casilla2>
-            <img id=imagen2 src="" alt="" />
+            <h1 name="casilla2">2</h1>
           </td>
           <td id=casilla3>
-            <img id=imagen3 src="" alt="" />
+            <h1 name="casilla3">3</h1>
           </td>
         </tr>
         <tr id=renglon2>
           <td id=casilla4>
-            <img id=imagen4 src="" alt="" />
+            <h1 name="casilla4">4</h1>
           </td>
           <td id=casilla5>
-            <img id=imagen5 src="" alt="" />
+            <h1 name="casilla5">5</h1>
           </td>
           <td id=casilla6>
-            <img id=imagen6 src="" alt="" />
+            <h1 name="casilla6">6</h1>
           </td>
         </tr>
 
 
         <tr id=renglon3>
           <td id=casilla7>
-            <img id=imagen7 src="" alt="" />
+            <h1 name="casilla7">7</h1>
           </td>
           <td id=casilla8>
-            <img id=imagen8 src="" alt="" />
+            <h1 name="casilla8">8</h1>
           </td>
           <td id=casilla9>
-            <img id=imagen9 src="" alt="" />
+            <h1 name="casilla9">9</h1>
           </td>
         </tr>
 
