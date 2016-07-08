@@ -39,7 +39,7 @@
       </tr>
     </table>
     <br>
-    <form action="/juego" method="post">
+    <form action="/marcar" method="post">
         <input type="text" name="numCasilla" value="">
       <input type="submit" name="Jugar" value="Jugar" >
     </form>
@@ -47,10 +47,10 @@
     <table id="tablero9casillas" align=center border="1" style="" class="tablero">
         <tr id=renglon1>
           <td id=casilla1>
-            <h1 name="casilla1">O</h1>
+            <h1 name="casilla1"><%= session["casillas"][0] %></h1>
           </td>
           <td id=casilla2>
-            <h1 name="casilla2">2</h1>
+            <h1 name="casilla2"><%= session["casillas"][1] %></h1>
           </td>
           <td id=casilla3>
             <h1 name="casilla3">3</h1>

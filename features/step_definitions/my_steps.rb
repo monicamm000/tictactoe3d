@@ -20,6 +20,7 @@ Then(/^el tablero debe tener "(.*?)" casillas$/) do |numeroCasillas|
 end
 
 Then(/^seleccionar casilla "(.*?)"$/) do |numCasilla|
+  fill_in("numCasilla", :with => numCasilla)
   click_button("Jugar")
 end
 
