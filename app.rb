@@ -1,13 +1,16 @@
 require 'sinatra'
 require './lib/Simbolo'
 
+enable :sessions
+
 get '/' do
     erb :home
 end
 
 post '/juego' do
-  @simboloJ1 = params["simbolo"]
+  session["simboloJ1"] = params["simbolo"]
   simbolo = Simbolo.new params["simbolo"]
-  @simboloJ2 = simbolo.getSimbolo
-    erb :index
+  session["simboloJ2"] = simbolo.getSimbolo
+  session["turno"] = "Jugador 1"
+  erb :index
 end
